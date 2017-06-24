@@ -1,0 +1,1 @@
+<center><img src="<?=base_url();?>assets/themes/404.png"/></center>

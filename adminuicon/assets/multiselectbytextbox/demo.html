@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="src/jquery.tokeninput.js"></script>
+	<link rel="stylesheet" href="styles/token-input.css" type="text/css" />
+    <link rel="stylesheet" href="styles/token-input-facebook.css" type="text/css" />
+	<script type="text/javascript">
+    $(document).ready(function() {
+		$('#submit').live("click",function()
+		{
+            alert("Would submit: " + $(this).siblings("input[type=text]").val());
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <h1>jQuery Multiple Selection with Textbox Demo</h1>
+
+    <h2 id="theme">Facebook Style</h2>
+    <div>
+        <input type="text" id="demo-input-facebook-theme" name="blah2" />
+        <input type="button" value="Submit" id="submit"/>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#demo-input-facebook-theme").tokenInput("php-example.php", {
+                theme: "facebook",
+                preventDuplicates: true
+            });
+        });
+        </script>
+    </div>
+
+
+</body>
+</html>
